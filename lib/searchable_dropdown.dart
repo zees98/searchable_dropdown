@@ -622,11 +622,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     if (widget.validator != null) {
       validatorOutput = widget.validator(selectedResult);
     }
-    var labelOutput = prepareWidget(widget.label, parameter: selectedResult,
-        stringToWidgetFunction: (string) {
-      return (Text(string,
-          style: TextStyle(color: Colors.blueAccent, fontSize: 13)));
-    });
+   
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -783,6 +779,11 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
 
   @override
   Widget build(BuildContext context) {
+    var labelOutput = prepareWidget(widget.label, parameter: selectedResult,
+        stringToWidgetFunction: (string) {
+      return (Text(string,
+          style: TextStyle(color: Colors.blueAccent, fontSize: 13)));
+    });
     return AnimatedContainer(
       padding: MediaQuery.of(context).viewInsets,
       duration: const Duration(milliseconds: 300),
@@ -799,6 +800,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
+              labelOutput
               titleBar(),
               //searchBar(),
               list(),
