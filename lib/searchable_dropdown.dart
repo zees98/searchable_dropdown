@@ -470,6 +470,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
 
   Widget get menuWidget {
     return (DropdownDialog(
+      label: widget.label,
       items: widget.items,
       hint: prepareWidget(widget.searchHint),
       isCaseSensitiveSearch: widget.isCaseSensitiveSearch,
@@ -696,10 +697,11 @@ class DropdownDialog<T> extends StatefulWidget {
   final BoxConstraints menuConstraints;
   final Function callOnPop;
   final Color menuBackgroundColor;
-
+  final String label;
   DropdownDialog({
     Key key,
     this.items,
+    this.label,
     this.hint,
     this.isCaseSensitiveSearch = false,
     this.closeButton,
