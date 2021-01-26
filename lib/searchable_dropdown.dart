@@ -784,7 +784,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
     var labelOutput = prepareWidget(widget.label, parameter: selectedResult,
         stringToWidgetFunction: (string) {
       return (Text(string,
-          style: TextStyle(color: Colors.blueAccent, fontSize: 13)));
+          style: TextStyle(fontSize: 25)));
     });
     return AnimatedContainer(
       padding: MediaQuery.of(context).viewInsets,
@@ -792,8 +792,8 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
       child: new Card(
         color: widget.menuBackgroundColor,
         margin: EdgeInsets.symmetric(
-            vertical: widget.dialogBox ? 10 : 5,
-            horizontal: widget.dialogBox ? 10 : 4),
+            vertical: widget.dialogBox ? 20 : 5,
+            horizontal: widget.dialogBox ? 20 : 4),
         child: new Container(
           constraints: widget.menuConstraints,
           padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
