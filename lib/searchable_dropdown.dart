@@ -800,7 +800,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              labelOutput
+              labelOutput,
               titleBar(),
               //searchBar(),
               list(),
