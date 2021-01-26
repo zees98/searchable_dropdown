@@ -630,7 +630,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        labelOutput ?? SizedBox.shrink(),
+      //  labelOutput ?? SizedBox.shrink(),
         Stack(
           children: <Widget>[
             Padding(
