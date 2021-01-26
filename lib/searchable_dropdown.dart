@@ -546,7 +546,10 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
                       context: context,
                       barrierDismissible: true,
                       builder: (context) {
-                        return (menuWidget);
+                        return Padding(
+                            padding:EdgeInsets.all(30),
+                            child: menuWidget
+                        );
                       });
                   if (widget.onChanged != null && selectedItems != null) {
                     widget.onChanged(selectedResult);
