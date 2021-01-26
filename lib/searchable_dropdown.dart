@@ -797,7 +797,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               titleBar(),
-              searchBar(),
+              //searchBar(),
               list(),
               closeButtonWrapper(),
             ],
